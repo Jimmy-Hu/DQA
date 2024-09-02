@@ -36,7 +36,7 @@ def main():
             scoreall.append(score)
             # print('{:}:{:.4f}'.format(path.split('\\')[1],score))
 
-        print('{:.4f}'.format(float(sum(scoreall)) / len(scoreall)))
+        print('average score: {:.6f}'.format(float(sum(scoreall)) / len(scoreall)))
         with open('evaluation_result.txt', 'w') as f:
             f.write('\n'.join(list(map(lambda x,y: '{:}:{:.4f}'.format(os.path.split(x)[1],y),imgpath ,scoreall))))
 
